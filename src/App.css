@@ -1,38 +1,299 @@
-.App {
+header {
+  width: 100%;
+  margin: 0;
+  background-color: #fff;
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+  background-color: #f1f1f1;
+}
+
+#links ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  list-style-type: none;
+  align-items: center;
+}
+#links ul li {
+  padding: 5px 20px;
+  list-style: none;
+}
+
+
+#links ul li a {
+  text-decoration: none;
+  color: #03203C !important;
+  font-weight: 600;
+}
+
+#links ul li a:hover {
+  color: #03203C !important;
+}
+
+#loaded_count {
+  position: fixed;
+  right: 5px;
+  bottom: 0;
+  background-color: white;
+  padding: 5px;
+}
+
+#players_main {
+  text-align: center;
+  padding-top: 70px;
+}
+
+#player_card {
+  background-color: white;
+  margin: auto;
+  width: 50%;
+  padding: 20px 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 4fr 4fr;
+}
+
+#get_stats {
+  border-radius: none;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: black;
+  padding: 10px 14px;
+  color: white;
+  font-size: 1rem;
+  position: relative;
+  top: 15px;
+}
+
+#player_id {
+  position: relative;
+  bottom: 5px;
+}
+
+#search_nav {
+  margin-right: 20px;
+}
+
+#inp {
+  border: none;
+  border-radius: none;
+  outline: none;
+  background-color: #f1f1f1;
+  padding: 5px 15px;
+  font-size: 1.1rem;
+  transition: .3s;
+}
+
+#inp:focus {
+  border: solid 1px black;
+  padding: 4px 14px;
+  padding-right: 40px; 
+}
+
+#stats_page {
+  margin-top: 80px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#search_nav button {
+  font-size: 1.1rem;
+  padding: 5px 15px;
+  border: none;
+  border-radius: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#search_nav button a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#homepage {
+  text-align: left;
+  margin-top: 70px;
+  padding: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#stats_page input {
+  background-color: white;
+  border: none;
+  border-radius: none;
+  outline: none;
+  padding: 5px 15px;
+  font-size: 1.3rem;
+}
+
+#stats_page input:focus {
+  border: solid 1px black;
+  padding: 4px 14px;
+}
+
+#search_btn {
+  font-size: 1.3rem;
+  padding: 5px 15px;
+  border: none;
+  border-radius: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 920px){
+  #link_home {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+  #link_stats {
+    display: none;
   }
 }
+@media only screen and (max-width: 768px){
+  #link_games {
+    display: none;
+  }
+}
+@media only screen and (max-width: 718px){
+  #inp:focus {
+    padding-right: 20px;
+  }
+}
+
+#stats_page table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin: auto;
+}
+
+#stats_page td, #stats_page th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#stats_page tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+#go {
+  font-size: 1.1rem;
+  height: 34px;
+  padding: 0 15px;
+  border: none;
+  border-radius: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  bottom: 1px;
+}
+
+#search_yr {
+  align-items: center;
+  text-align: center;
+}
+
+#get_stats_btn {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  place-items: center;
+}
+
+.team_card {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  width: 300px;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.teams_container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: auto;
+  place-items: center;
+}
+.team_card:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width:1300px){
+  .teams_container{ 
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width:1076px){
+  .teams_container{ 
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (max-width:728px){
+  .teams_container{ 
+    grid-template-columns: 1fr ;
+  }
+}
+
+#team_info {
+  width: 95%;
+  margin:auto;
+  background-color:white;
+  padding: 10px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 50px;
+  
+}
+#next_game {
+  box-shadow: 3px 3px 10px grey;
+  padding: 20px;
+}
+
+.game {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+.games_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 17px;
+  padding: 10px;
+}
+@media (max-width:1000px){
+  .games_container {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width:800px){
+  .game {
+    flex-direction: column;
+  }
+  .info_1 {width:'100%'}
+  .info_2 {padding-top: '20px';width:'100%'}
+}
+
+.info_1 {width:'50%'}
+.info_2 {padding-top: '20px';width:'48%'}
